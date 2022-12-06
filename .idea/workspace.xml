@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ff2c5def-5e70-44b6-9221-69e53776bcc5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataImport.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/importData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middleware/AuthMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/Middleware/AuthMiddleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middleware/Errors.js" beforeDir="false" afterPath="$PROJECT_DIR$/Middleware/Errors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/OrderModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/Models/OrderModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/ProductModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/Models/ProductModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/ReviewModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/Models/ReviewModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/UserModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/Models/UserModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Routes/OrderRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/Routes/OrderRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Routes/ProductRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/Routes/ProductRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Routes/UserRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/Routes/UserRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/MongoDb.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/MongoDb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Products.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/Products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/generateToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/generateToken.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2IXr7IECGIUzryuahVv4zBMZanP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/DATN/backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "D:\\DATN\\backend\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "preferences.general"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ff2c5def-5e70-44b6-9221-69e53776bcc5" name="Changes" comment="" />
+      <created>1670338599956</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670338599956</updated>
+      <workItem from="1670338601568" duration="833000" />
+      <workItem from="1670339469424" duration="521000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
