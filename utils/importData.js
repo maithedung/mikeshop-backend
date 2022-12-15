@@ -6,10 +6,10 @@ import products from "../data/Products.js";
 import asyncHandler from "express-async-handler";
 import { protect, protectAdmin } from "../Middleware/AuthMiddleware.js";
 
-const ImportData = express.Router();
+const importData = express.Router();
 
 // IMPORT USERS DATA WITH ADMIN
-ImportData.post("/users", protect, protectAdmin, asyncHandler(
+importData.post("/users", protect, protectAdmin, asyncHandler(
   async (req, res) => {
     await User.remove({});
     const importUser = await User.insertMany(users);
@@ -18,7 +18,7 @@ ImportData.post("/users", protect, protectAdmin, asyncHandler(
 );
 
 // IMPORT PRODUCTS DATA WITH ADMIN
-ImportData.post("/products", protect, protectAdmin, asyncHandler(
+importData.post("/products", protect, protectAdmin, asyncHandler(
   async (req, res) => {
     await Product.remove({});
     const importProduct = await Product.insertMany(products);
@@ -26,4 +26,4 @@ ImportData.post("/products", protect, protectAdmin, asyncHandler(
   })
 );
 
-export default ImportData;
+export default importData;
