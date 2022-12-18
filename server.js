@@ -10,6 +10,7 @@ import { errorHandler, notFound } from "./Middleware/Errors.js";
 import userRouter from "./Routes/UserRoutes.js";
 import orderRouter from "./Routes/OrderRoutes.js";
 import swaggerDocs from "./swagger_output.js";
+import authRoute from "./Routes/AuthRoutes.js";
 
 
 dotenv.config();
@@ -22,9 +23,12 @@ app.use(cors());
 // API
 app.use("/api/docs", swaggerUi.serve);
 app.use("/api/import", importData);
+
 app.use("/api/products", productRoute);
 app.use("/api/users", userRouter);
 app.use("/api/orders", orderRouter);
+app.use("/api/auth/otp", authRoute)
+
 app.get("/api/config/paypal", (req, res) => {
   res.send(process.env.PAYPAL_CLIENT_ID);
 });

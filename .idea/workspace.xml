@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff2c5def-5e70-44b6-9221-69e53776bcc5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Routes/AuthRoutes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/UserModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/Models/UserModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,6 +79,8 @@
       <workItem from="1670481343005" duration="1894000" />
       <workItem from="1671003856820" duration="4100000" />
       <workItem from="1671113060357" duration="232000" />
+      <workItem from="1671289249912" duration="7386000" />
+      <workItem from="1671328621650" duration="5437000" />
     </task>
     <servers />
   </component>
