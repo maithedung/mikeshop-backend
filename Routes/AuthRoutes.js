@@ -2,18 +2,20 @@ import express from "express";
 import speakeasy from "speakeasy";
 import User from "../Models/UserModel.js";
 import asyncHandler from "express-async-handler";
+import { protect } from "../Middleware/AuthMiddleware.js";
+import { USER_NOT_FOUND } from "../error_messages.js";
 
 const authRoute = express.Router();
 
-authRoute.post("/generate", asyncHandler(async (req, res) => {
-  const { userId } = req.body;
+authRoute.post("/generate", protect, asyncHandler(async (req, res) => {
+  const { userId, email } = req.body;
   const user = await User.findById(userId);
 
   if (user) {
     try {
       const { ascii, hex, base32, otpauth_url } = speakeasy.generateSecret({
         issuer: "MikeShop",
-        name: "admin@gmail.com",
+        name: `MikeShop (${email})`,
         length: 15
       });
       user.ascii = ascii;
@@ -21,7 +23,7 @@ authRoute.post("/generate", asyncHandler(async (req, res) => {
       user.base32 = base32;
       user.otpauth_url = otpauth_url;
       const updatedUser = await user.save();
-      res.json({
+      res.status(200).json({
         _id: updatedUser._id,
         base32: updatedUser.base32,
         otpauth_url: updatedUser.otpauth_url
@@ -32,7 +34,7 @@ authRoute.post("/generate", asyncHandler(async (req, res) => {
     }
   } else {
     res.status(404);
-    throw new Error("User not found");
+    throw new Error(USER_NOT_FOUND);
   }
 }));
 
@@ -71,7 +73,7 @@ authRoute.post("/verify", asyncHandler(async (req, res) => {
     }
   } else {
     res.status(404);
-    throw new Error("User not found");
+    throw new Error(USER_NOT_FOUND);
   }
 }));
 
@@ -90,7 +92,7 @@ authRoute.post("/validate", asyncHandler(async (req, res) => {
       });
       if (validToken) {
         res.status(200).json({
-          otp_valid: true
+          otp_valid: true,
         });
       } else {
         res.status(401).json({
@@ -104,7 +106,7 @@ authRoute.post("/validate", asyncHandler(async (req, res) => {
     }
   } else {
     res.status(404);
-    throw new Error("User not found");
+    throw new Error(USER_NOT_FOUND);
   }
 }));
 
@@ -114,7 +116,6 @@ authRoute.post("/disable", asyncHandler(async (req, res) => {
 
   if (user) {
     try {
-      const { base32 } = user;
       user.otp_enabled = false;
       user.otp_verified = false;
       const updatedUser = await user.save();
@@ -131,7 +132,7 @@ authRoute.post("/disable", asyncHandler(async (req, res) => {
     }
   } else {
     res.status(404);
-    throw new Error("User not found");
+    throw new Error(USER_NOT_FOUND);
   }
 }));
 

@@ -36,10 +36,12 @@ const userSchema = mongoose.Schema({
       type: String
     },
     otp_enabled: {
-      type: Boolean
+      type: Boolean,
+      default: false
     },
     otp_verified: {
-      type: Boolean
+      type: Boolean,
+      default: false
     }
   },
   {
