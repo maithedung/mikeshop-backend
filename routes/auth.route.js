@@ -1,9 +1,9 @@
 import express from "express";
 import speakeasy from "speakeasy";
-import User from "../Models/UserModel.js";
+import User from "../models/user.model.js";
 import asyncHandler from "express-async-handler";
-import { protect } from "../Middleware/AuthMiddleware.js";
-import { USER_NOT_FOUND } from "../error_messages.js";
+import { protect } from "../middlewares/authMiddleware.js";
+import { USER_NOT_FOUND } from "../utils/errorMessage.js";
 
 const authRoute = express.Router();
 

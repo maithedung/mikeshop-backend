@@ -3,14 +3,14 @@ import dotenv from "dotenv";
 import cors from "cors";
 import swaggerUi from "swagger-ui-express";
 
-import connectDatabase from "./config/MongoDb.js";
+import connectDatabase from "./configs/db.config.js";
 import importData from "./utils/importData.js";
-import productRoute from "./Routes/ProductRoutes.js";
-import { errorHandler, notFound } from "./Middleware/Errors.js";
-import userRouter from "./Routes/UserRoutes.js";
-import orderRouter from "./Routes/OrderRoutes.js";
+import productRoute from "./routes/product.route.js";
+import { errorHandler, notFound } from "./middlewares/errors.js";
+import userRouter from "./routes/user.route.js";
+import orderRouter from "./routes/order.router.js";
 import swaggerDocs from "./swagger_output.js";
-import authRoute from "./Routes/AuthRoutes.js";
+import authRoute from "./routes/auth.route.js";
 
 
 dotenv.config();

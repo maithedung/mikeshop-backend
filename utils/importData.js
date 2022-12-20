@@ -1,10 +1,10 @@
 import express from "express";
-import User from "../Models/UserModel.js";
-import users from "../data/User.js";
-import Product from "../Models/ProductModel.js";
-import products from "../data/Products.js";
+import User from "../models/user.model.js";
+import users from "../data/user.js";
+import Product from "../models/product.model.js";
+import products from "../data/products.js";
 import asyncHandler from "express-async-handler";
-import { protect, protectAdmin } from "../Middleware/AuthMiddleware.js";
+import { protect, protectAdmin } from "../middlewares/authMiddleware.js";
 
 const importData = express.Router();
 

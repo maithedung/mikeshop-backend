@@ -1,14 +1,14 @@
 import express from "express";
 import asyncHandler from "express-async-handler";
-import User from "../Models/UserModel.js";
+import User from "../models/user.model.js";
 import generateToken from "../utils/generateToken.js";
-import { protect, protectAdmin } from "../Middleware/AuthMiddleware.js";
+import { protect, protectAdmin } from "../middlewares/authMiddleware.js";
 import {
   INVALID_EMAIL_OR_PASSWORD,
   INVALID_USER_DATA,
   USER_ALREADY_EXISTS,
   USER_NOT_FOUND
-} from "../error_messages.js";
+} from "../utils/errorMessage.js";
 
 const userRouter = express.Router();
 
