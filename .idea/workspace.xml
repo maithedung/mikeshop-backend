@@ -5,22 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff2c5def-5e70-44b6-9221-69e53776bcc5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/auth.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Middleware/AuthMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/authMiddleware.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Middleware/Errors.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/errors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/OrderModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/order.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/ProductModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/product.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/ReviewModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/review.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/UserModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Routes/AuthRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth.route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Routes/OrderRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/order.router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Routes/ProductRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/product.route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Routes/UserRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/user.route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/MongoDb.js" beforeDir="false" afterPath="$PROJECT_DIR$/configs/db.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/Products.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/error_messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/errorMessage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/auth.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/auth.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/auth.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/order.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/order.router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/product.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/product.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/user.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/user.route.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/importData.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/importData.js" afterDir="false" />
     </list>
