@@ -22,6 +22,26 @@ const userSchema = mongoose.Schema({
     },
     googleId: {
       type: String
+    },
+    ascii: {
+      type: String
+    },
+    hex: {
+      type: String
+    },
+    base32: {
+      type: String
+    },
+    otpauth_url: {
+      type: String
+    },
+    otp_enabled: {
+      type: Boolean,
+      default: false
+    },
+    otp_verified: {
+      type: Boolean,
+      default: false
     }
   },
   {

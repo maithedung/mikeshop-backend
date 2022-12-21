@@ -1,12 +1,7 @@
-import express from "express";
 import asyncHandler from "express-async-handler";
-import Order from "../Models/OrderModel.js";
-import { protect, protectAdmin } from "../Middleware/AuthMiddleware.js";
+import Order from "../models/order.model.js";
 
-const orderRouter = express.Router();
-
-// CREATE ORDER
-orderRouter.post("/", protect, asyncHandler(async (req, res) => {
+const addOrder = asyncHandler(async (req, res) => {
   const {
     orderItems, shippingAddress, paymentMethod, itemsPrice, taxPrice, shippingPrice, totalPrice
   } = req.body;
@@ -14,7 +9,6 @@ orderRouter.post("/", protect, asyncHandler(async (req, res) => {
   if (orderItems && orderItems.length === 0) {
     res.status(400);
     throw new Error("No order items");
-    return;
   } else {
     const order = new Order({
       orderItems,
@@ -30,22 +24,19 @@ orderRouter.post("/", protect, asyncHandler(async (req, res) => {
     const createOrder = await order.save();
     res.status(201).json(createOrder);
   }
-}));
+});
 
-// USER GET ALL ORDERS
-orderRouter.get("/", protect, asyncHandler(async (req, res) => {
+const getAllOrder = asyncHandler(async (req, res) => {
   const order = await Order.find({ user: req.user._id }).sort({ _id: -1 });
   res.json(order);
-}));
+});
 
-// ADMIN GET ALL ORDERS
-orderRouter.get("/all", protect, protectAdmin, asyncHandler(async (req, res) => {
+const getAllOrderWithAdmin = asyncHandler(async (req, res) => {
   const orders = await Order.find({}).sort({ _id: -1 }).populate("user", "id name email");
   res.json(orders);
-}));
+});
 
-// GET ORDER BY ID
-orderRouter.get("/:id", protect, asyncHandler(async (req, res) => {
+const getOrder = asyncHandler(async (req, res) => {
   const order = await Order.findById(req.params.id).populate("user", "name email");
 
   if (order) {
@@ -54,10 +45,9 @@ orderRouter.get("/:id", protect, asyncHandler(async (req, res) => {
     res.status(404);
     throw new Error("Order not found");
   }
-}));
+});
 
-// ORDER IS PAID
-orderRouter.put("/:id/pay", protect, asyncHandler(async (req, res) => {
+const payOrder = asyncHandler(async (req, res) => {
   const order = await Order.findById(req.params.id);
 
   if (order) {
@@ -76,10 +66,9 @@ orderRouter.put("/:id/pay", protect, asyncHandler(async (req, res) => {
     res.status(404);
     throw new Error("Order not found");
   }
-}));
+});
 
-// ORDER IS DELIVERED WITH ADMIN
-orderRouter.put("/:id/delivered", protect, protectAdmin, asyncHandler(async (req, res) => {
+const deliveredOrderWithAdmin = asyncHandler(async (req, res) => {
   const order = await Order.findById(req.params.id);
 
   if (order) {
@@ -92,6 +81,13 @@ orderRouter.put("/:id/delivered", protect, protectAdmin, asyncHandler(async (req
     res.status(404);
     throw new Error("Order not found");
   }
-}));
+});
 
-export default orderRouter;
+export {
+  addOrder,
+  getAllOrder,
+  getAllOrderWithAdmin,
+  getOrder,
+  payOrder,
+  deliveredOrderWithAdmin
+};
