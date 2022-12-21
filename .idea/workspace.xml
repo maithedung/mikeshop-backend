@@ -6,13 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ff2c5def-5e70-44b6-9221-69e53776bcc5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/auth.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/auth.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/auth.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth.route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/order.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/order.router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/product.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/product.route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/user.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/user.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middlewares/auth.middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/auth.middleware.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/importData.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/importData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger_output.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/swaggerDocs.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +56,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\DATN\backend\data" />
       <recent name="D:\DATN\backend\utils" />
       <recent name="D:\DATN\backend" />
       <recent name="D:\DATN\backend\config" />

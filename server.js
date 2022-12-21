@@ -9,7 +9,7 @@ import productRoute from "./routes/product.route.js";
 import { errorHandler, notFound } from "./middlewares/error.middleware.js";
 import userRouter from "./routes/user.route.js";
 import orderRouter from "./routes/order.router.js";
-import swaggerDocs from "./swagger_output.js";
+import swaggerDocs from "./data/swaggerDocs.js";
 import authRoute from "./routes/auth.route.js";
 
 
