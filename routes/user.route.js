@@ -1,27 +1,33 @@
 import express from "express";
-import asyncHandler from "express-async-handler";
-import User from "../models/user.model.js";
-import generateToken from "../utils/generateToken.js";
 import { protect, protectAdmin } from "../middlewares/auth.middleware.js";
 import {
-  INVALID_EMAIL_OR_PASSWORD,
-  INVALID_USER_DATA,
-  USER_ALREADY_EXISTS,
-  USER_NOT_FOUND
-} from "../utils/errorMessage.js";
-import { getProfile, getAllUser, login, register, updateProfile } from "../controllers/user.controller.js";
+  getProfile,
+  getAllUser,
+  login,
+  register,
+  updateProfile,
+  searchUser,
+  getUser,
+  deleteUser
+} from "../controllers/user.controller.js";
 
-const userRouter = express.Router();
+const userRoute = express.Router();
 
 // LOGIN
-userRouter.post("/login", login);
+userRoute.post("/login", login);
 // REGISTER
-userRouter.post("/register", register);
+userRoute.post("/register", register);
 // GET PROFILE
-userRouter.get("/profile", protect, getProfile);
+userRoute.get("/profile", protect, getProfile);
 // UPDATE PROFILE
-userRouter.put("/profile", protect, updateProfile);
+userRoute.put("/profile", protect, updateProfile);
 // GET ALL USER WITH ADMIN
-userRouter.get("/", protect, protectAdmin, getAllUser);
+userRoute.get("/", protect, protectAdmin, getAllUser);
+// SEARCH USER
+userRoute.get("/search", protect, searchUser);
+// GET USER
+userRoute.get("/:id", protect, getUser);
+// DELETE USER
+userRoute.delete("/:id", protect, protectAdmin, deleteUser);
 
-export default userRouter;
+export default userRoute;

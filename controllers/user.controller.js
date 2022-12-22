@@ -7,6 +7,7 @@ import {
   USER_ALREADY_EXISTS,
   USER_NOT_FOUND
 } from "../utils/errorMessage.js";
+import Product from "../models/product.model.js";
 
 const login = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
@@ -21,7 +22,8 @@ const login = asyncHandler(async (req, res) => {
       token: generateToken(user._id),
       createdAt: user.createdAt,
       otp_enabled: user.otp_enabled,
-      otp_verified: user.otp_enabled
+      otp_verified: user.otp_enabled,
+      avatar: user.avatar
     });
   } else {
     res.status(401);
@@ -101,10 +103,48 @@ const getAllUser = asyncHandler(async (req, res) => {
   res.status(200).json(users);
 });
 
+const searchUser = asyncHandler(async (req, res) => {
+  const keyword = req.query.search
+    ? {
+      $or: [
+        { name: { $regex: req.query.search, $options: "i" } },
+        { email: { $regex: req.query.search, $options: "i" } }
+      ]
+    }
+    : {};
+
+  const users = await User.find(keyword).find({ _id: { $ne: req.user._id } });
+  res.status(200).json(users);
+});
+
+const getUser = asyncHandler(async (req, res) => {
+  const user = await User.find(req.params.id).lean().exec();
+  if (user) {
+    res.status(200).json(user);
+  } else {
+    res.status(404);
+    throw new Error(USER_NOT_FOUND);
+  }
+});
+
+const deleteUser = asyncHandler(async (req, res) => {
+  const user = await User.findById(req.params.id);
+  if (user) {
+    await user.remove();
+    res.status(200).json({ message: "User deleted" });
+  } else {
+    res.status(404);
+    throw new Error(USER_NOT_FOUND);
+  }
+});
+
 export {
   login,
   register,
   getProfile,
   updateProfile,
-  getAllUser
+  getAllUser,
+  searchUser,
+  getUser,
+  deleteUser
 };
