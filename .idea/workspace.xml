@@ -6,7 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="ff2c5def-5e70-44b6-9221-69e53776bcc5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middlewares/auth.middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/auth.middleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/chat.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/chat.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/user.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/swaggerDocs.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/swaggerDocs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/user.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/user.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger_output.json" beforeDir="false" afterPath="$PROJECT_DIR$/swagger_output.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +47,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/DATN/frontend&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/DATN/backend/controllers&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -53,6 +59,10 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\DATN\backend\controllers" />
+      <recent name="D:\DATN\backend\routes" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\DATN\backend\data" />
       <recent name="D:\DATN\backend\utils" />
@@ -81,6 +91,14 @@
       <workItem from="1671289249912" duration="7386000" />
       <workItem from="1671328621650" duration="5437000" />
       <workItem from="1671608454489" duration="1030000" />
+      <workItem from="1671775229386" duration="137000" />
+      <workItem from="1671775426428" duration="2754000" />
+      <workItem from="1671782776139" duration="3213000" />
+      <workItem from="1671807381352" duration="5631000" />
+      <workItem from="1671855342292" duration="1469000" />
+      <workItem from="1671865376881" duration="716000" />
+      <workItem from="1671866885019" duration="929000" />
+      <workItem from="1671881532342" duration="4615000" />
     </task>
     <servers />
   </component>
